@@ -21,20 +21,27 @@ using namespace std;
 class Solution {
 public:
 	int longestSubstring(string s, int k) {
-		if (s.size() == 0 || k > s.size())   return 0;
-		if (k == 0)  return s.size();
-
-		unordered_map<char, int> Map;
-		for (int i = 0; i < s.size(); i++){
-			Map[s[i]]++;
+		unordered_map<char, int> cnt;
+		for (char c : s) cnt[c]++;
+		int i = 0, j = 0, ans = 0;
+		while (i < s.size()) {
+			unordered_map<char, int> added;
+			while (i < s.size() && cnt[s[i]] < k) ++i;
+			j = i;
+			while (j < s.size() && cnt[s[j]] + added[s[j]] >= k) {
+				added[s[j]]++;
+				cnt[s[j]]--;
+				++j;
+			}
+			bool valid = true;
+			for (char c = 'a'; c <= 'z' && valid; ++c) {
+				if (added[c] != 0 && added[c] < k) valid = false;
+			}
+			if (valid) ans = max(ans, j - i);
+			else ans = max(ans, longestSubstring(s.substr(i, j - i), k));
+			i = j;
 		}
-		int idx = 0;
-		while (idx <s.size() && Map[s[idx]] >= k)    idx++;
-		if (idx == s.size()) return s.size();
-		int left = longestSubstring(s.substr(0, idx), k);
-		int right = longestSubstring(s.substr(idx + 1), k);
-
-		return max(left, right);
+		return ans;
 	}
 };
 int _tmain(int argc, _TCHAR* argv[])
