@@ -16,6 +16,7 @@ local.properties
 .settings/
 .loadpath
 .db
+*.VC.db
 # External tool builders
 .externalToolBuilders/
 
