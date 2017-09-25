@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "leetcode-39-求和", "leetcode-39-求和\leetcode-39-求和.vcproj", "{FB30B14E-080C-4D21-8E3C-760ACF026633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB30B14E-080C-4D21-8E3C-760ACF026633}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FB30B14E-080C-4D21-8E3C-760ACF026633}.Debug|Win32.Build.0 = Debug|Win32
+		{FB30B14E-080C-4D21-8E3C-760ACF026633}.Release|Win32.ActiveCfg = Release|Win32
+		{FB30B14E-080C-4D21-8E3C-760ACF026633}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

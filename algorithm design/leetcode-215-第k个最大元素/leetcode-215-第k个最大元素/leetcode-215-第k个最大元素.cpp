@@ -46,19 +46,3 @@ public:
 		return nums[res];
     }
 };
-int main()
-{
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
-	vector<int> ve;
-	ve.push_back(7);
-	ve.push_back(6);
-	ve.push_back(5);
-	ve.push_back(4);
-	ve.push_back(3);
-	ve.push_back(2);
-	ve.push_back(1);
-	Solution s;
-	s.findKthLargest(ve,2);
-}
-

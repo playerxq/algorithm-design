@@ -53,7 +53,7 @@ public:
 };
 int main()
 {
-	vector<vector<int>> a = { {4, 10, 15, 24, 26},{0, 9, 12, 20},{5, 18, 22, 30} };
+	vector<vector<int>> a = { {0, 1, 2, 3, 4},{5, 9, 12, 20},{7, 18, 22, 30} };
 	Solution s;
 	s.smallestRange(a);
     return 0;

@@ -61,7 +61,7 @@ public:
 };
 int main()
 {
-    freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
+	Solution s;
+	s.combinationSum3(3,9);
 }
 
