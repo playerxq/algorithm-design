@@ -21,20 +21,9 @@ using namespace std;
 class Solution {
 public:
 	int kthGrammar(int N, int K) {
-		if (N <= 1) return 0;
-		int allCount = pow(2, N - 1);
-		int c = 0;
-		while (allCount>2) {
-			if (K>allCount / 2) {
-				K -= allCount / 2;
-				c++;
-			}
-			allCount = allCount >> 1;
-		}
-		if (c % 2 == 0) {
-			return K == 1 ? 0 : 1;
-		}
-		else return K == 1 ? 1 : 0;
+		if (N == 1) return 0;
+		if (K % 2 == 0) return (kthGrammar(N - 1, K / 2) == 0) ? 1 : 0;
+		else return (kthGrammar(N - 1, (K + 1) / 2) == 0) ? 0 : 1;
 	}
 };
 int main()
